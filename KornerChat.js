@@ -59,7 +59,7 @@ module.exports = class KornerChat extends Order{
                 aReturn.push("Thank-you for your order!");
                 aReturn.push(`${this.sReciept} <br/> Price $${this.nPrice}`);
                 aReturn.push(`click here to pay: ${this.sUrl}/payment/${this.sNumber}/`);
-                aReturn.push(`click here to pay: ${this.sUrl}/payment/`);
+                //aReturn.push(`click here to pay: ${this.sUrl}/payment/`);
                 //aReturn.push(`click here to pay: https://mobile-dev-306.herokuapp.com/payment`);
                 //aReturn.push(`click here to pay: https://serene-taiga-04277.herokuapp.com/payment`);
             case OrderState.PAYMENT:
