@@ -22,6 +22,14 @@ app.use(express.static("www"));
 
 let oSockets = {};
 let oOrders = {};
+
+app.post("/payment/", (req, res) => {
+  const sFrom = req.body.telephone;
+  oOrders[sFrom] = new KornerChat(sFrom);
+  res.end(oOrders[sFrom].renderForm(req.body.title, req.body.telephone));
+  console.log('posted')
+})
+
 app.post("/payment/:phone", (req, res) => {
   // this happens when the order is complete
   sFrom = req.params.phone;

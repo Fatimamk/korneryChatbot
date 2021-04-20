@@ -96,7 +96,7 @@ module.exports = class KornerChat extends Order{
         <script
           src="https://www.paypal.com/sdk/js?client-id=${sClientID}"> // Required. Replace SB_CLIENT_ID with your sandbox client ID.
         </script>
-        Order ID ${this.sId} has been placed. Your order ${this.sItem} total is $${this.nPrice}.
+        Order ${this.sId} has been placed. Your order ${this.sItem} total is $${this.nPrice}.
         <div id="paypal-button-container"></div>
   
         <script>
