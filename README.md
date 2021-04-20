@@ -1,4 +1,4 @@
-# <a href="https://github.com/rhildred/ES6OrderBot" target="_blank">ES6 Order Bot</a>
+# Assignment 3 Afiya and Fatima
 
 User interface retrived from Pat Wilken.
 
