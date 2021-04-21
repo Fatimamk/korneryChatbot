@@ -81,7 +81,7 @@ module.exports = class KornerChat extends Order{
         this.sId =sAmount;
       }
       
-      const sClientID = process.env.AYYdysYcTluMaiRETcuwVYTiLS6JsYs1kkP9p1esuseIo26my86SETC5TIuTzCrudb70_f5kMjFPRZjk;
+      const sClientID = process.env.SB_CLIENT_ID;
       //AYYdysYcTluMaiRETcuwVYTiLS6JsYs1kkP9p1esuseIo26my86SETC5TIuTzCrudb70_f5kMjFPRZjk; <form action="https://serene-taiga-04277.herokuapp.com/payment" method="post">
        return(`
       <!DOCTYPE html>
