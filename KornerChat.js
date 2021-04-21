@@ -31,8 +31,9 @@ module.exports = class KornerChat extends Order{
             case OrderState.ID:
                  this.stateCur = OrderState.ORDER; 
                  this.sId = sInput;
-                 if(sInput.length == 32){     
-                  aReturn.push("Enter which items you would like in single word format, seperate your entries with a space. For example if you would like to order drink vinegar prism and taiyaki gastro tousled enter: drinkvinegarprism, taiyakigastrotousled");
+                 if(sInput.length == 32){  
+                  aReturn.push("Items availible: <br/><strong>Vinegar Prism</strong> -Balsamic dressing over an avacado salad. <br/><strong>Taiyaki Gastro</strong> -Calamari in peanut sauce with greens. <br/><strong>Wayfare Lomo</strong> -Parfait made with acai and coconut.  <br/><strong>Shrimp StirFry</strong> -Shrimp in a bed of organic locally grown salad.<br/><strong>Corn Art </strong>- Sweet corn beef taco. <br/><strong>Kale Party</strong> -Green hearty soup, comes with garlic bread"); 
+                  aReturn.push("Enter which items you would like in single word format, seperate your entries with a space. Example: vinegarprism, taiyakigastro");    
                   }
                   else{
                     aReturn.push("Invalid ID - please enter a valid ID")
