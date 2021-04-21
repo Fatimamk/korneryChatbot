@@ -23,12 +23,12 @@ app.use(express.static("www"));
 let oSockets = {};
 let oOrders = {};
 
-app.post("/payment/", (req, res) => {
+app.post("/payment", (req, res) => {
   const sFrom = req.body.telephone;
   oOrders[sFrom] = new KornerChat(sFrom);
   res.end(oOrders[sFrom].renderForm(req.body.title, req.body.telephone));
   console.log('posted')
-})
+});
 
 app.post("/payment/:phone", (req, res) => {
   // this happens when the order is complete
@@ -66,9 +66,12 @@ app.get("/payment/:phone", (req, res) => {
 
 app.get("/payment/", (req, res) => {
   // this happens when the user clicks on the link in SMS
-  const sFrom = req.body.telephone;
-  oOrders[sFrom] = new KornerChat(sFrom);
-  res.end(oOrders[sFrom].renderForm(req.body.title, req.body.price));
+  const sFrom = req.params.phone;
+  if (!oOrders.hasOwnProperty(sFrom)) {
+    res.end("order already complete");
+  } else {
+    res.end(oOrders[sFrom].renderForm());
+  }
   });
 
 app.post("/sms", (req, res) => {
